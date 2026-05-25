@@ -1,0 +1,21 @@
+document.getElementById("UpdateButton").addEventListener("click", async () => {
+    console.log("Click");
+
+    const colour = document.getElementById("ColourPicker").value;
+    console.log(colour);
+
+    try {
+        const res = await fetch("http://192.168.1.65:8000/api/colour.json", {
+            method: "PATCH",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({ colour })
+        });
+
+        console.log("Status:", res.status);
+        console.log("Response:", await res.text());
+    } catch (err) {
+        console.error("Fetch error:", err);
+    }
+});

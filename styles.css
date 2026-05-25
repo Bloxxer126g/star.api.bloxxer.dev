@@ -1,0 +1,43 @@
+body {
+    background-color: hsl(284, 100%, 96%);
+}
+
+h1,button {
+    font-family: "Satoshi", serif;
+}
+
+#Center {
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: fixed;
+}
+
+.Input {
+    width: 15vw;
+    margin-bottom: 10px;
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 0.7rem;
+    height: 7vh;
+    font-size: 3vh;
+    transition: 0.6s ease-in-out scale 0.2s,0.2s margin, 0.2s ease-in-out background-color;
+}
+
+#UpdateButton {
+    height: 4vh;
+}
+
+.Input:hover {
+    scale: 1.5;
+    margin: 20px;
+}
+
+.Input:active {
+    background-color: rgb(38, 192, 0);
+}
