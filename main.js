@@ -5,7 +5,7 @@ document.getElementById("UpdateButton").addEventListener("click", async () => {
     console.log(colour);
 
     try {
-        const res = await fetch("http://192.168.1.65:8000/api/colour.json", {
+        const res = await fetch("https://starstore.bloxxer.dev/api/colour.json", {
             method: "PATCH",
             headers: {
                 "Content-Type": "application/json"
